@@ -74,3 +74,4 @@ if ($recursive === true && is_array($cell) && !empty($cell)) {
 
 								echo array2table($data);							
 ?>
+
