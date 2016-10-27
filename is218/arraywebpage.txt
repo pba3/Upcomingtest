@@ -1,0 +1,61 @@
+I worked on the following array functions:
+
+1)array_filter
+output :Odd : Array ( [a] => 1 [c] => 3 [e] => 5 ) Even: Array ( [0] => 6 [2]
+=> 8 [4] => 10 [6] => 12 )
+
+2)array_flip
+output: Array ( [oranges] => 0 [apples] => 1 [pears] => 2 [Banana] => 3 )
+
+3)array_keys
+output: Array ( [oranges] => 0 [apples] => 1 [pears] => 2 [Banana] => 3 )
+
+4)array map
+output:Array ( [0] => 1 [1] => 8 [2] => 27 [3] => 64 [4] => 125 )
+
+5)arrary merge
+output: Array ( [color] => green [0] => 2 [1] => 4 [2] => a [3] => b [shape] =>
+trapezoid [4] => 4 )
+
+6)array pad
+output:
+
+7)array pop
+output:Array ( [0] => orange [1] => banana [2] => apple [3] => raspberry )
+
+8)array push
+output:Array ( [0] => orange
+[1] => banana
+[2] => apple
+[3] => raspberry
+[4] => Peach
+)
+
+9)aray reverse
+output:Array ( [0] => m [1] => a [2] => s [3] => s )
+
+10)array search
+output: 2
+
+11)array unique
+output:Array ( [0] => green [1] => blue )
+
+12)array values
+output:Array ( [0] => M [1] => S )
+
+13)array walk 
+output:Before ...: d. lemon
+a. orange
+b. banana
+c. apple
+... and after: d. fruit: lemon
+a. fruit: orange
+b. fruit: banana
+c. fruit: apple
+
+14)arsort
+output:r=2 a=1 w=0
+
+15)asort
+output: c = apple b = banana d = lemon a = orange
+
