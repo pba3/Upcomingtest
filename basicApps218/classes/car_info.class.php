@@ -1,7 +1,8 @@
 <?php
-	require_once 'car.class.php';
+	//require_once 'car.class.php';
 
-	$car =new Car();
+	$car =new car();
+	echo '</br>';
 
 	echo $car->getCarType();
 
