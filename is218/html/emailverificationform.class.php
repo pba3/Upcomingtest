@@ -7,7 +7,7 @@ Email"><br>
 
 <!-- <input type="button" onclick="alert"value="Submit"><br> -->
  <br>
-   <a href ="verifyemail.html">Submit</a>
+   <a href ="verifyemail.class.php">Submit</a>
 
 
 
