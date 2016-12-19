@@ -36,7 +36,7 @@ select image to upload:
 															                  <br>
 																	   <center>
 																	                    <a
-																			    href="doneform.html">
+																			    href="done.class.php">
 																			    Submit</a>
 																			     </center>
 																			      </form>
