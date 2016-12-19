@@ -21,7 +21,7 @@ Your Email:<br><input type ="text" name ="Your Email"><div
 <br>
 Password:<br>  <input type ="text" name ="Password"><br>
 <br>
-<a href="emailverificationform.html">Submit</a>
+<a href="emailverificationform.class.php">Submit</a>
 </form>
 </center>
 
