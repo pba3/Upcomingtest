@@ -65,11 +65,12 @@ if(isset($_POST['btn-signup']))
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"  />
 <link rel="stylesheet" href="style.css" type="text/css"  />
 </head>
+<pre>
 <body>
 <div class="container">
      <div class="form-container">
         <form method="post">
-            <h2>Sign up.</h2><hr />
+            <i><h2>Sign up.</h2><hr /><i>
             <?php
             if(isset($error))
             {
@@ -111,6 +112,6 @@ if(isset($_POST['btn-signup']))
         </form>
        </div>
 </div>
-
+</pre>
 </body>
 </html>
