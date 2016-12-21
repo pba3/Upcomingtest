@@ -19,19 +19,21 @@ $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 <link rel="stylesheet" href="style.css" type="text/css"  />
 <title>welcome - <?php print($userRow['email']); ?></title>
 </head>
-
+<pre>
 <body>
 
 <div class="header">
- <div class="right">
+ <div class="left">
      
     </div>
     <div class="left">
-     <label><a href="logoutpage.php?logout=true"><i class="glyphicon glyphicon-log-out"></i> logout</a></label>
+     <i><h2><label><a href="logoutpage.php?logout=true"></i></h2><i class="glyphicon glyphicon-log-out"></i> logout</a></label>
     </div>
 </div>
-<div class="content">
-welcome : <?php print($userRow['username']); ?>
+<i><h2><div class="content">
+Welcome: You are all set</i></h2>
+ <?php print($userRow['username']); ?></pre>
 </div>
+
 </body>
 </html>
