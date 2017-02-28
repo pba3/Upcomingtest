@@ -1,4 +1,8 @@
 <?php
+//echo "<br>Hello from functions file.";
+//return "Just a stub.";
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+	ini_set('display_erros', 1);
 
 function get_case($type, $name, $pass, $amount) {
 if ($type != 'A'and $type !='D' and $type !=='W'){
@@ -19,83 +23,62 @@ else if ($type !='A' and $amount != (is_numeric($amount))){
 else if ($type !='A' and $amount <=0){
 	exit("Enter a positive number into amount ");
 }
-else{
-	return $type;
+//else{
+	//return $type;
 }
-}
+
 
 function admin ($name, $pass){
 	if ($name =='admin' && $pass =='007'){
 	print 'hello there admin<br>';	
 	}
 	else{
-		return("Not allowed");
+		exit("Not allowed");
 	}
 }
+//if ($name !='admin' || $pass !='magic')exit with msg...
 
-function get_A($type, $s1 ) {
-$s1="select * from account where user ='greg'";
-$out = "<br> \$s is: $s1<br>" ;
-($t=mysql_query($t)) or die(mysql_error());
-while ($r=mysql_fetch_array($t)) {
-	$user =$r["user"];
-	$mail =$r["email"];
-	$out  .="<br>user is $user";
-	$out  .="<br>mail is $email";
- }
- return $out;
-}
+
 
 //function user
 function user ( $type, $name, $pass, $amount  ){
 	$s="select * from account where user ='$name' && pass ='$pass'";
-	$b = mysql_query($s);
-	if (mysql_num_rows($b) ==0){
-		die("username or password is not valid");
+	$t = mysql_query($s);
+	if (mysql_num_rows($t) ==0){
+		exit("username or password is not valid");
 	}
 	if ($type =='W'){
-		$r=mysql_fetch_array($b);
+		$r=mysql_fetch_array($t);
 		$balance =$r["current_balance"];
 		if ($amount > $balance){
-			die("not enough funds to withdraw");
+			exit("not enough funds to withdraw");
 		}
 	}
 }
+//if it's W check if cureent_balance < $amount : exit
+// exit ( "stop overdraw" );
 
 function update ($type, $name, $amount){
-//insert to T(Transacion). SQL is:
-	$t = "insert into transaction values ('$name' ,'$type', '$amount', NOW() )";
-	if ($type =="W"){
-		$s= "update account Set current_balance = current_balance - $amount where user = '$name' ";
-	} else if ($type =="D"){
-		$s= "update account Set current_balance = current_balance + $amount where user = '$name' ";
-	}
-	
+//insert to T(Transacion)W. SQL is:
+$t = "insert into transaction values ('$name' ,'$type', '$amount', NOW() )";
+if ($type =="W"){
+	$s= "update account Set current_balance = current_balance - $amount where user = '$name' ";
+
+} else if ($type =="D"){
+//update A(Account) is current_balance for D. SQL is:
+	$s= "update account Set current_balance = current_balance + $amount where user = '$name' ";
+}
 	print("<br><br> SQL s for update is:<br>");
 	print("$s<br><br>");
 	print "Entered sql function. Just stub";
 	mysql_query($s);
 	($t=mysql_query($t)) or die(mysql_error());//return results
-	//return;
+	//($t=mysql_query($t)) or die (mysql_error());
 
-}
 
-function mymail($type, $name, $results1){
-  if(isset($_GET["mailrequest"]) && !empty($_GET["mailrequest"])){
-	echo "Mail is sent";
-}
-	else{
-	echo "failed to send mail";
+return;
 }
 
-$to = 'pba3@mailinator.com';
-$subject = 'hey there! how are you? ';
-$results1 = 'result <br> How are you?';
-$headers = "From:abc@somebody.com \r\n";
-$result1 = "Hello<br> Phin";
-$headers .='MIME-Version: 1.0';
-$headers .='Content-type: text/html; charset=iso-8859-1';
-//mail
-}
+
 
 ?>
