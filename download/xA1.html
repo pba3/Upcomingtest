@@ -1,0 +1,82 @@
+<!DOCTYPE html5>
+
+<script>
+function  f() {
+
+var ptrA =    document.getElementById("A")
+var ptrW =    document.getElementById("W")
+var ptrD =    document.getElementById("D")
+var ptrUSER = document.getElementById("user")
+var ptrPASS = document.getElementById("pass")
+var ptrAMT =  document.getElementById("amount")
+
+if (!ptrA.checked && !ptrW.checked && !ptrD.checked){
+alert("Enter atleast one box");
+return false;
+}
+
+else if (!ptrUSER.value.trim() || !ptrPASS.value.trim()){
+  
+  if(!ptrUSER.value.trim()){
+  alert("Enter user name");
+} else{("Enter Password");
+}
+return false;
+}
+
+ else if (ptr.checked && ptrAmount.value.trim()){
+ alert("Admin amount empty");
+ return false;
+ }
+}
+ else if (ptrA.checked && ptrAmount.value.trim()){
+ alert("Admin Enter an amount");
+ return false;
+ }
+ else if (ptrW.checked || ptrD.checked) && (!ptrAMT.value.trim() ||isNaN(ptrAMT.value.trim()||ptrAMT.value.trim()<0){
+  alert("Enter an Amount");
+  return false;
+  }
+//text field ==> .value gives its value
+//butoon ==> .checked gives its state
+
+
+</script>
+
+<style>
+fieldset { margin:auto; position: absolute; left: 80px;
+						width: 20% ;
+			            height: 300;
+		                background: #FFFFFF ;
+		  }
+
+</style>
+<form action="xA1.php" onsubmit "return f()" >
+
+<fieldset><legend>hello</legend>
+
+<!--<input type=text name="user"><br>-->
+<input type = text   name ="user"  id ="user"
+	autocomplete = "off" placeholder ="name" required
+>USER<br>
+
+<!--<input type=text name="pass"><br>-->
+<input type = text   name ="pass"  id ="pass"
+	autocomplete = "off" placeholder ="pass" required
+>PASS<br>
+
+<input type = text   name ="amount"  id ="amount" 
+	autocomplete = "off" placeholder ="amount" required
+>AMOUNT<br>
+
+
+
+
+<!--<input type=text name="amount"><br>-->
+<input type = radio  name ="type"  id ="A"    value = "A" >Admin<br>
+<input type = radio  name ="type"  id ="W"    value = "W" >Withdraw<br>
+<input type = radio  name ="type"  id ="D"    value = "D" >Deposite<br>
+<input type=radio name="mailrequest" >Mail<br>
+<input type =submit>
+</fieldset>
+</form>
